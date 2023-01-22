@@ -89,9 +89,9 @@ hold = $('#hold')
 value = $('#hitValue')
 moneyValue = $('#money').text('$' + money)
 
-cash =  new Audio('/sounds/cash.wav')
-hitFx  =  new Audio('/sounds/hit.wav')
-loss =  new Audio('/sounds/loss.wav')
+cash =  new Audio('sounds/cash.wav')
+hitFx  =  new Audio('sounds/hit.wav')
+loss =  new Audio('sounds/loss.wav')
 
 function placeBet() {
     //disable buttons first
