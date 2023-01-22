@@ -14,11 +14,16 @@ $('#body')
     .append(
         $('<div>').attr('class', 'button-row')
             .append(
-                $('<button>').attr('id', 'hit').text('Hit Me!')
-            )
-            .append(
-                $('<button>').attr('id', 'hold').text('Hold')
-            )
+            $('<div>').attr('id', 'betDiv').attr('class', 'col-12 d-flex justify-content-center')
+        )
+        .append($('<div>').attr('class', 'row d-flex justify-content-center')
+        .append(
+            $('<button>').attr('id', 'hit').text('Hit Me!').attr('class', 'btn btn-primary col-5 d-flex justify-content-center rounded-5 p-5 m-1')
+        )
+        .append(
+            $('<button>').attr('id', 'hold').text('stand').attr('class', 'col-5 btn btn-secondary d-flex justify-content-center rounded-5 p-5 m-1')
+        ))
+            
     )
     .append(
         $('<p>').attr('id', 'hitValue')
@@ -28,9 +33,6 @@ $('#body')
     )
     .append(
         $('<div>').attr('class', 'final-row')
-            .append(
-                $('<div>').attr('id', 'betDiv')
-            )
             .append(
                 $('<p>').attr('id', 'playerValue')
             )
@@ -95,10 +97,10 @@ function placeBet() {
     $('#betDiv').append(
         $('<input>').attr('type', 'number').attr('id', 'betBox')
             .attr('min', '100').attr('max', money).attr('step', '100')
-            .attr('placeholder', '100').attr('value', '100')
+            .attr('placeholder', '100').attr('value', '100').attr('class', 'rounded-2 input-lg mt-5 mb-5')
     )
     $('#betDiv').append(
-        $('<button>').attr('id', 'submitBet').text('bet')
+        $('<button>').attr('id', 'submitBet').text('bet').attr('class', 'btn btn-success mt-5 mb-5')
     )
     //on submit of the bet, assign the bet value
     $('#submitBet').click(e => {
@@ -115,7 +117,7 @@ placeBet()
 
 //reset function
 function RESET() {
-    playAgain = $("#playAgain").append($("<button>").text("play again?").attr('id', 'playAgainButton'))
+    playAgain = $("#playAgain").append($("<button>").text("play again?").attr('id', 'playAgainButton').attr('class', 'btn btn-primary rounded-5'))
     $('#playAgainButton').click(e => {
         //play again resets all values IN PROGRESS
         $('#hitValue').text(' ');
@@ -160,7 +162,7 @@ hold.click(e => {
     $('#hold').prop('disabled', true);
 
     //creates a random value for the computer 
-    computerValue = Math.floor(Math.random() * (21 - 15 + 1)) + 15
+    computerValue = Math.floor(Math.random() * (21 - 16 + 1)) + 16
 
     //display on screen
     playerValue = $("#playerValue").text('final value: ' + totalvalue)

@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(224, 205, 176);
+}
+
+
+h1 {
+    font-family: 'Casino Flat Shadow', sans-serif;
+    color: black;
+    font-size: 4vw;
+}
+h3 {
+    font-family: 'Dollar Bill', sans-serif;
+    font-size: 8vw;
+}
+
+.button-row {
+    justify-items: center;
+}
+
+#betBox {
+    width: 20vw;
+    font-size: 3vh;
+}
+#submitBet {
+    width: 10vw;
+}
+
+
+#hitValue {
+    text-align: center;
+    font-size: 10vw;
+}
