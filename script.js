@@ -89,6 +89,10 @@ hold = $('#hold')
 value = $('#hitValue')
 moneyValue = $('#money').text('$' + money)
 
+cash =  new Audio('/sounds/cash.wav')
+hitFx  =  new Audio('/sounds/hit.wav')
+loss =  new Audio('/sounds/loss.wav')
+
 function placeBet() {
     //disable buttons first
     $('#hit').prop('disabled', true);
@@ -143,9 +147,11 @@ hit.click(e => {
     tableValue = + hitMe(Deck)[1]
     totalvalue += tableValue
     value.text(totalvalue)
+    hitFx.play()
     if (totalvalue > 21) {
         value.text(totalvalue)
         $('#bust').text('BUST!').attr('style', 'color: white;')
+        loss.play()
         $('#body').attr('style', 'background-color: rgb(238, 96, 96)').attr('class', 'display-5 justify-content-center')
         $('#hit').prop('disabled', true);
         $('#hold').prop('disabled', true);
@@ -173,6 +179,7 @@ hold.click(e => {
     if (totalvalue > computerValue) {
         state = $('#winLoose').text('YOU WIN!').attr('style', 'color: green')
         .attr('class', 'display-5 justify-content-center')
+        cash.play()
         money = (money + (bet * 2))
         moneyValue = $('#money').text(' ').text('$' + money)
         $('#body').attr('style', 'background-color: rgb(167, 231, 161)')
@@ -181,6 +188,7 @@ hold.click(e => {
     if (totalvalue < computerValue) {
         state = $('#winLoose').text('YOU LOOSE!').attr('style', 'color: white')
         .attr('class', 'display-5 justify-content-center')
+        loss.play()
         money = (money - bet)
         moneyValue = $('#money').text(' ').text('$' + money)
         $('#body').attr('style', 'background-color: rgb(238, 96, 96)')

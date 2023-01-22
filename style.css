@@ -45,7 +45,8 @@ h3 {
     text-align: center;
     font-size: 10vw;
 }
-#playerValue,#computerValue, #winLoose, #playAgain, #bust { margin: auto; text-align: center !important;}
+#hitValue,#playerValue,#computerValue, #winLoose, #playAgain, #bust { margin: auto; text-align: center !important;
+font-weight: 800 !important;}
 
 .card {
     background-color: rgb(255, 236, 220);
