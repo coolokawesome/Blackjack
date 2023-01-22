@@ -5,7 +5,7 @@ $('#body')
         $('<div>').attr('id', 'headerRow').attr('class', 'header-row')
             .append(
                 $('<h1>').attr('style', 'text-align: center')
-                    .text('21'))
+                    .text(''))
             .append(
                 $('<h3>').attr('style', 'text-align: center')
                     .text('money: ')
@@ -120,6 +120,7 @@ function RESET() {
     playAgain = $("#playAgain").append($("<button>").text("play again?").attr('id', 'playAgainButton').attr('class', 'btn btn-primary rounded-5'))
     $('#playAgainButton').click(e => {
         //play again resets all values IN PROGRESS
+        $('#body').attr('style', 'rgb(235, 198, 163)')
         $('#hitValue').text(' ');
         $('#playerValue').text(' ');
         $('#computerValue').text(' ');
@@ -144,7 +145,8 @@ hit.click(e => {
     value.text(totalvalue)
     if (totalvalue > 21) {
         value.text(totalvalue)
-        $('#bust').text('BUST!').attr('style', 'color: red;')
+        $('#bust').text('BUST!').attr('style', 'color: white;')
+        $('#body').attr('style', 'background-color: rgb(238, 96, 96)').attr('class', 'display-5 justify-content-center')
         $('#hit').prop('disabled', true);
         $('#hold').prop('disabled', true);
         money = money - bet
@@ -170,19 +172,25 @@ hold.click(e => {
 
     if (totalvalue > computerValue) {
         state = $('#winLoose').text('YOU WIN!').attr('style', 'color: green')
+        .attr('class', 'display-5 justify-content-center')
         money = (money + (bet * 2))
         moneyValue = $('#money').text(' ').text('$' + money)
+        $('#body').attr('style', 'background-color: rgb(167, 231, 161)')
 
     }
     if (totalvalue < computerValue) {
-        state = $('#winLoose').text('YOU LOOSE!').attr('style', 'color: red')
+        state = $('#winLoose').text('YOU LOOSE!').attr('style', 'color: white')
+        .attr('class', 'display-5 justify-content-center')
         money = (money - bet)
         moneyValue = $('#money').text(' ').text('$' + money)
+        $('#body').attr('style', 'background-color: rgb(238, 96, 96)')
 
     }
     else if (totalvalue == computerValue) {
         state = $('#winLoose').text('TIE!').attr('style', 'color: black')
+        .attr('class', 'display-5 justify-content-center')
     }
+    $('.final-row').attr('class', 'display-5 d justify-content-center')
     //generate play again button
     RESET();
 })

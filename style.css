@@ -1,16 +1,31 @@
+* {
+    transition-duration: 0.3s;
+}
+
 body {
-    background-color: rgb(224, 205, 176);
+    background-color: rgb(235, 198, 163);
+    transition-duration: 0.3s;
 }
 
 
 h1 {
     font-family: 'Casino Flat Shadow', sans-serif;
-    color: black;
+    
     font-size: 4vw;
 }
 h3 {
     font-family: 'Dollar Bill', sans-serif;
+    color: rgb(62, 95, 68) !important;
     font-size: 8vw;
+    color: #444;
+  text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px rgb(56, 209, 102), 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px rgb(90, 179, 104), 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px rgb(82, 161, 66), 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
 
 .button-row {
@@ -29,4 +44,26 @@ h3 {
 #hitValue {
     text-align: center;
     font-size: 10vw;
+}
+#playerValue,#computerValue, #winLoose, #playAgain, #bust { margin: auto; text-align: center !important;}
+
+.card {
+    background-color: rgb(255, 236, 220);
+    width: 100px;
+    height: 170px;
+    border: solid 2px black;
+    position: relative;
+    margin: 30px;
+    font-weight: 800;
+}
+.card-text {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.card-text-2 {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+
 }
