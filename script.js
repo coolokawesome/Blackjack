@@ -13,16 +13,19 @@ $('#body')
             ))
     .append(
         $('<div>').attr('class', 'button-row')
+            
             .append(
-            $('<div>').attr('id', 'betDiv').attr('class', 'col-12 d-flex justify-content-center')
+                $('<div>').attr('class', 'row d-flex justify-content-center')
+                .append(
+                    $('<button>').attr('id', 'hit').text('Hit Me!').attr('class', 'btn btn-primary col-5 d-flex justify-content-center rounded-5 p-5 m-1')
+                    )
+                .append(
+                    $('<button>').attr('id', 'hold').text('stand').attr('class', 'col-5 btn btn-success d-flex justify-content-center rounded-5 p-5 m-1')
+                    )
+                    .append(
+                        $('<div>').attr('id', 'betDiv').attr('class', 'col-12 d-flex justify-content-center')
+                        )
         )
-        .append($('<div>').attr('class', 'row d-flex justify-content-center')
-        .append(
-            $('<button>').attr('id', 'hit').text('Hit Me!').attr('class', 'btn btn-primary col-5 d-flex justify-content-center rounded-5 p-5 m-1')
-        )
-        .append(
-            $('<button>').attr('id', 'hold').text('stand').attr('class', 'col-5 btn btn-secondary d-flex justify-content-center rounded-5 p-5 m-1')
-        ))
             
     )
     .append(
@@ -173,8 +176,8 @@ hold.click(e => {
     computerValue = Math.floor(Math.random() * (21 - 16 + 1)) + 16
 
     //display on screen
-    playerValue = $("#playerValue").text('final value: ' + totalvalue)
-    dealerValue = $('#computerValue').text('house value: ' + computerValue)
+    playerValue = $("#playerValue").text('Player: ' + totalvalue)
+    dealerValue = $('#computerValue').text('house: ' + computerValue)
 
     if (totalvalue > computerValue) {
         state = $('#winLoose').text('YOU WIN!').attr('style', 'color: green')

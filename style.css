@@ -37,7 +37,7 @@ h3 {
     font-size: 3vh;
 }
 #submitBet {
-    width: 10vw;
+    width: 30vw;
 }
 
 
@@ -67,4 +67,12 @@ font-weight: 800 !important;}
     bottom: 4px;
     right: 4px;
 
+}
+.btn {
+    font-weight: 800;
+    font-size: xx-large;
+}
+.input-lg {
+    min-width: 30vw;
+    min-height: 10vh;
 }
