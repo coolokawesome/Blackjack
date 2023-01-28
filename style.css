@@ -1,5 +1,5 @@
 * {
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
 
 h1 {
     font-family: 'Casino Flat Shadow', sans-serif;
-    
     font-size: 4vw;
 }
 h3 {
@@ -48,11 +47,16 @@ h3 {
 #hitValue,#playerValue,#computerValue, #winLoose, #playAgain, #bust { margin: auto; text-align: center !important;
 font-weight: 800 !important;}
 
+#cardRow {
+    display: flex;
+    justify-content: center;
+}
+
 .card {
     background-color: rgb(255, 236, 220);
     width: 100px;
     height: 170px;
-    border: solid 2px black;
+    border: solid 2px rgb(75, 75, 75);
     position: relative;
     margin: 30px;
     font-weight: 800;
@@ -69,7 +73,7 @@ font-weight: 800 !important;}
 
 }
 .btn {
-    font-weight: 800;
+    font-weight: 500;
     font-size: xx-large;
 }
 .input-lg {
