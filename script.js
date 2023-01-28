@@ -20,7 +20,7 @@ $('#body')
                     $('<button>').attr('id', 'hit').text('Hit Me!').attr('class', 'btn btn-primary col-5 d-flex justify-content-center rounded-5 p-5 m-1')
                     )
                 .append(
-                    $('<button>').attr('id', 'hold').text('stand').attr('class', 'col-5 btn btn-success d-flex justify-content-center rounded-5 p-5 m-1')
+                    $('<button>').attr('id', 'hold').text('Stand').attr('class', 'col-5 btn btn-success d-flex justify-content-center rounded-5 p-5 m-1')
                     )
                     .append(
                         $('<div>').attr('id', 'betDiv').attr('class', 'col-12 d-flex justify-content-center')
