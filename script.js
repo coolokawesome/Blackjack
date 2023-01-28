@@ -32,6 +32,9 @@ $('#body')
         $('<p>').attr('id', 'hitValue')
     )
     .append(
+        $('<div>').attr('id', 'cardRow')
+    )
+    .append(
         $('<p>').attr('id', 'bust')
     )
     .append(
@@ -72,7 +75,6 @@ function hitMe(X) {
     let randomCard = Math.floor(Math.random() * X.length);
     return X[randomCard];
 }
-
 
 //tableValue = an assignment of the hitme() function that returns a random card value from the deck.
 let tableValue = 0;
@@ -117,6 +119,7 @@ function placeBet() {
         $('#hold').prop('disabled', false);
         $('#submitBet').remove()
         $('#betBox').remove()
+        $('#hit').click().click()
     })
 }
 
@@ -141,21 +144,23 @@ function RESET() {
         $("#playAgainButton").remove()
         $('#submitBet').remove()
         $('#betBox').remove()
+        $('.card').remove()
         placeBet()
     })
 }
 
 
 hit.click(e => {
-    tableValue = + hitMe(Deck)[1]
+    let hitValue = hitMe(Deck)[1]
+    tableValue =+ hitValue
     totalvalue += tableValue
     value.text(totalvalue)
     hitFx.play()
     if (totalvalue > 21) {
         value.text(totalvalue)
-        $('#bust').text('BUST!').attr('style', 'color: white;')
+        $('#bust').text('BUST!').attr('style', 'color: white;').attr('class', 'display-5')
         loss.play()
-        $('#body').attr('style', 'background-color: rgb(238, 96, 96)').attr('class', 'display-5 justify-content-center')
+        $('#body').attr('style', 'background-color: rgb(238, 96, 96)').attr('class', 'justify-content-center')
         $('#hit').prop('disabled', true);
         $('#hold').prop('disabled', true);
         money = money - bet
@@ -165,6 +170,13 @@ hit.click(e => {
     else {
         console.log(totalvalue);
     }
+    getCardRow = $('#cardRow')
+    getCard = $('<div>').attr('class', 'card')
+    cardText1 = $('<p>').attr('class', 'card-text').text(hitValue)
+    cardText2 = $('<p>').attr('class', 'card-text-2').text(hitValue)
+    getCard.append(cardText1)
+    getCard.append(cardText2)
+    getCardRow.append(getCard)
 })
 
 hold.click(e => {
@@ -205,6 +217,8 @@ hold.click(e => {
     //generate play again button
     RESET();
 })
+
+
 
 
 
