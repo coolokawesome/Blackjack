@@ -156,6 +156,7 @@ hit.click(e => {
     totalvalue += tableValue
     value.text(totalvalue)
     hitFx.play()
+    //bust the player if value goes over 21
     if (totalvalue > 21) {
         value.text(totalvalue)
         $('#bust').text('BUST!').attr('style', 'color: white;').attr('class', 'display-5')
@@ -191,6 +192,7 @@ hold.click(e => {
     playerValue = $("#playerValue").text('Player: ' + totalvalue)
     dealerValue = $('#computerValue').text('house: ' + computerValue)
 
+    //comparisons for a win or loss
     if (totalvalue > computerValue) {
         state = $('#winLoose').text('YOU WIN!').attr('style', 'color: green')
         .attr('class', 'display-5 justify-content-center')
