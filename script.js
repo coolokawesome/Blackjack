@@ -220,6 +220,13 @@ hold.click(e => {
     RESET();
 })
 
+//popover 
+var button = document.getElementById("popover-button");
+var content = document.getElementById("popover-content");    
+button.addEventListener("click", function() {
+  content.style.display = content.style.display === "block" ? "none" : "block";
+});
+
 
 
 
