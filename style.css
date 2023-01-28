@@ -54,11 +54,11 @@ font-weight: 800 !important;}
 
 .card {
     background-color: rgb(255, 236, 220);
-    width: 100px;
-    height: 170px;
+    width: 50px;
+    height: 90px;
     border: solid 2px rgb(75, 75, 75);
     position: relative;
-    margin: 30px;
+    margin: 10px;
     font-weight: 800;
 }
 .card-text {
@@ -68,7 +68,7 @@ font-weight: 800 !important;}
 }
 .card-text-2 {
     position: absolute;
-    bottom: 4px;
+    bottom: -10px;
     right: 4px;
 
 }
