@@ -5,7 +5,7 @@ $('#body')
         $('<div>').attr('id', 'headerRow').attr('class', 'header-row')
             .append(
                 $('<h1>').attr('style', 'text-align: center')
-                    .text(''))
+                    .text('').attr('class', 'h1'))
             .append(
                 $('<h3>').attr('style', 'text-align: center')
                     .text('money: ')
@@ -23,7 +23,7 @@ $('#body')
                     $('<button>').attr('id', 'hold').text('Stand').attr('class', 'col-5 btn btn-success d-flex justify-content-center rounded-5 p-5 m-1')
                     )
                     .append(
-                        $('<div>').attr('id', 'betDiv').attr('class', 'col-12 d-flex justify-content-center')
+                        $('<div>').attr('id', 'betDiv').attr('class', 'col-6 d-flex justify-content-center')
                         )
         )
             
@@ -161,7 +161,7 @@ hit.click(e => {
         value.text(totalvalue)
         $('#bust').text('BUST!').attr('style', 'color: white;').attr('class', 'display-5')
         loss.play()
-        $('#body').attr('style', 'background-color: rgb(238, 96, 96)').attr('class', 'justify-content-center')
+        $('#body').attr('style', 'background-color: #FF8181').attr('class', 'justify-content-center')
         $('#hit').prop('disabled', true);
         $('#hold').prop('disabled', true);
         money = money - bet

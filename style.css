@@ -22,9 +22,6 @@ h3 {
     2px 1px 1px rgb(56, 209, 102), 1px 2px 1px #eee,
     3px 2px 1px #ccc, 2px 3px 1px #eee,
     4px 3px 1px rgb(90, 179, 104), 3px 4px 1px #eee,
-    5px 4px 1px #ccc, 4px 5px 1px #eee,
-    6px 5px 1px rgb(82, 161, 66), 5px 6px 1px #eee,
-    7px 6px 1px #ccc;
 }
 
 .button-row {
@@ -90,4 +87,7 @@ font-weight: 800 !important;}
     color: #000;
     text-shadow: 0 1px 0 #fff;
     opacity: .2;
+  }
+  #subimtBet {
+    margin-left: 30px !important;
   }
