@@ -11248,3 +11248,10 @@ a.list-group-item-danger.active {
 a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
   background-color: #e63b31;
 }
+
+.chip {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  margin: 10px;
+}

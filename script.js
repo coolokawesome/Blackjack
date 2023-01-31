@@ -10,7 +10,8 @@ $('#body')
                 $('<h3>').attr('style', 'text-align: center')
                     .text('money: ')
                     .append('<p>').attr('id', 'money')
-            ))
+            )
+        )
     .append(
         $('<div>').attr('class', 'button-row')
             
@@ -24,6 +25,13 @@ $('#body')
                     )
                     .append(
                         $('<div>').attr('id', 'betDiv').attr('class', 'col-6 d-flex justify-content-center')
+                        )
+                    
+        )
+            .append(
+                $('<div>').attr('id', 'chipsRow').attr('class', 'row d-flex justify-content-center')
+                    .append(
+                        $('<div>').attr('id', 'chipsDiv').attr('class', 'd-flex justify-content-center')
                         )
         )
             
@@ -98,6 +106,17 @@ cash =  new Audio('sounds/cash.wav')
 hitFx  =  new Audio('sounds/hit.wav')
 loss =  new Audio('sounds/loss.wav')
 
+function chipBet (initValue) {
+    //get the bet box
+betbox = $('#betBox');
+    //get the chip value
+
+    //add the chip value to the text box
+
+    //if the money the user has exceeds the bet amount, 
+    //cancel the chip bet and throw a max value
+}
+
 function placeBet() {
     //disable buttons first
     $('#hit').prop('disabled', true);
@@ -106,13 +125,12 @@ function placeBet() {
     $('#betDiv').append(
         $('<input>').attr('type', 'number').attr('id', 'betBox')
             .attr('min', '100').attr('max', money).attr('step', '100')
-            .attr('placeholder', '100').attr('value', '100').attr('class', 'rounded-2 input-lg mt-5 mb-5')
-    )
+            .attr('placeholder', '100').attr('value', '100').attr('class', 'rounded-2 input-lg mt-5 mb-5'))
     $('#betDiv').append(
-        $('<button>').attr('id', 'submitBet').text('bet').attr('class', 'btn btn-success mt-5 mb-5')
-    )
+        $('<button>').attr('id', 'submitBet').text('bet').attr('class', 'btn btn-success mt-5 mb-5'))
+
     //on submit of the bet, assign the bet value
-    $('#submitBet').click(e => {
+    $('#submitBet').click(() => {
         bet = $('#betBox').val()
         console.log(bet)
         $('#hit').prop('disabled', false);
@@ -123,7 +141,7 @@ function placeBet() {
     })
 }
 
-placeBet()
+placeBet() 
 
 //reset function
 function RESET() {
