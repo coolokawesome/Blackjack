@@ -1,10 +1,10 @@
 * {
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 body {
     background-color: rgb(235, 198, 163);
-    transition-duration: 0.3s;
+    overflow-x: hidden;
 }
 
 
@@ -19,9 +19,13 @@ h3 {
     color: #444;
   text-shadow: 
     1px 0px 1px #ccc, 0px 1px 1px #eee, 
-    2px 1px 1px rgb(56, 209, 102), 1px 2px 1px #eee,
+    2px 1px 1px rgb(56, 209, 102), 1px 2px 1px rgb(255, 255, 255),
     3px 2px 1px #ccc, 2px 3px 1px #eee,
     4px 3px 1px rgb(90, 179, 104), 3px 4px 1px #eee,
+}
+#winLoose {
+    text-shadow: 
+    10px 40px 2px #ccc, 0px 2px 1px rgb(53, 70, 42) !important;
 }
 
 .button-row {
