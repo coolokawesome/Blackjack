@@ -222,7 +222,7 @@ hold.click(e => {
     }
     if (totalvalue < computerValue) {
         state = $('#winLoose').text('YOU LOOSE!').attr('style', 'color: white')
-        .attr('class', 'display-5 justify-content-center')
+        .attr('class', 'justify-content-center')
         loss.play()
         money = (money - bet)
         moneyValue = $('#money').text(' ').text('$' + money)
